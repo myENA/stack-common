@@ -5,5 +5,5 @@
   name: mariadb
   path: roles/mariadb
 - src: https://bitbucket.ena.net/users/dmabry/repos/stack-common
-  name: common
+  name: stack-common
   path: roles/common
