@@ -1,0 +1,17 @@
+- name: Add EPEL repo
+  yum:
+    name: epel-release
+    state: latest
+
+- name: Add LUX repository
+  yum_repository:
+    name: lux
+    description: LUX YUM repo
+    baseurl: http://repo.iotti.biz/CentOS/$releasever
+
+- name: Add required base packages
+  yum: pkg={{item}} state=installed
+    with_items:
+     - wget
+     - curl
+     - yum-plugin-priorities
