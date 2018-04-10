@@ -4,7 +4,5 @@
     state: latest
 
 - name: Add LUX repository
-  yum_repository:
-    name: lux
-    description: LUX YUM repo
-    baseurl: http://repo.iotti.biz/CentOS/$releasever
+  yum:
+    name: http://repo.iotti.biz/CentOS/7/noarch/lux-release-7-1.noarch.rpm
