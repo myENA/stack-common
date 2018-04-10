@@ -1,0 +1,16 @@
+- hosts: all
+  roles:
+    - stack-common
+    - ntpd
+    - mariadb
+  vars:
+   ntpd_upstreams:
+     - 207.191.191.90
+   mariadb_root_password: "{{ lookup('password', 'credentials/mysql-root-password length=15') }}"
+   mariadb_databases:
+     - name: piler
+   mariadb_users:
+     - name: piler
+       host: localhost
+       password: "{{ lookup('password', 'credentials/mysqlpassword length=15') }}"
+       priv: "piler.*:ALL"

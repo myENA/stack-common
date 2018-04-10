@@ -1,1 +1,9 @@
 - src: reallyenglish.ntpd
+  name: ntpd
+  path: roles/ntpd/
+- src: sfromm.mariadb
+  name: mariadb
+  path: roles/mariadb
+- src: https://bitbucket.ena.net/users/dmabry/repos/stack-common
+  name: common
+  path: roles/common
