@@ -7,7 +7,8 @@ installed on all stacks, so we added a task that ensures that it will be install
 Requirements
 ------------
 
-There are currently no external requirements for this role.
+Reguires sudo
+
 
 Role Variables
 --------------
