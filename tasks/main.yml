@@ -2,3 +2,4 @@
 # tasks file for stack-common/
   - import_tasks: yum-repos.yml
   - import_tasks: packages.yml
+  - import_tasks: services.yml
