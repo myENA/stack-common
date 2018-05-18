@@ -2,4 +2,4 @@
   user:
     - name: root
       update_password: always
-      password: {{ root_password }}
+      password: "{{ root_password }}"
