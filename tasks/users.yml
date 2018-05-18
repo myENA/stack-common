@@ -1,0 +1,4 @@
+- name: Set Root Password
+  user:
+    - name: root
+    - password: {{ root_password }}
