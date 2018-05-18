@@ -1,4 +1,5 @@
 - name: Set Root Password
   user:
     - name: root
-    - password: {{ root_password }}
+      update_password: always
+      password: {{ root_password }}
