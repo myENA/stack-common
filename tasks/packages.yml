@@ -4,5 +4,10 @@
   with_items:
      - wget
      - curl
-     - yum-plugin-priorities
      - haveged
+- name: Add yum if Centos
+  action: >
+    {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
+  with_items:
+     - yum-plugin-priorities
+  when: ansible_distribution == 'CentOS' 
